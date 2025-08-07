@@ -1,13 +1,5 @@
 /* Reset styles */
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Reset styles */
-
 h1,
 h2,
 h3,
@@ -22,9 +14,10 @@ button {
 }
 
 a {
+  display: block;
+  font-family: inherit;
   text-decoration: none;
   color: currentColor;
-  display: block;
 }
 
 ul {
@@ -32,9 +25,18 @@ ul {
 }
 
 button {
+  display: block;
+  padding: 0;
+  font-family: inherit;
   border: none;
+  outline: none;
   cursor: pointer;
   background-color: transparent;
+}
+
+*::before,
+*::after {
+  display: block;
 }
 
 /* Responsive images */
@@ -45,9 +47,4 @@ img {
 
   object-fit: cover;
   object-position: center;
-}
-
-*::before,
-*::after {
-  display: block;
 }

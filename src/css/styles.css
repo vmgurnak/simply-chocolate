@@ -1,14 +1,9 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-
+/* @import url('../../node_modules/modern-normalize/modern-normalize.css'); */
 @import url('./reset.css');
+@import url('./fonts.css');
 
-/* @import url('./header.css'); */
-/* @import url(./hero.css); */
+@import url('./header.css');
+@import url(./hero.css);
 /* @import url(./advantages.css); */
 /* @import url(./components.css); */
 @import url(./how-made.css);
@@ -19,50 +14,18 @@
 /* @import url(./footer.css); */
 
 :root {
-  /* Color */
+  --color-black: #111111;
+  --color-dark: #1e1823;
+  --color-orange: #fd9222;
+  --color-button-hover: #fcf1e0;
+  --color-white: #ffffff;
+  --color-background: #fafafa;
 
-  --black: #111111;
-  --dark-purple: #1e1823;
-  --orange: #fd9222;
+  --font-family-base: 'Montserrat', sans-serif;
 
-  /* Text */
-
-  /* Transition*/
-
-  /* Adaptive */
+  --transition-duration: 0.4s;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* -----------CONTAINER------------ */
-
-/* - mobile: верстка гумова від 320px, стає адаптивною на 375px;
-- tablet: 768px;
-- desktop: 1200px */
-
-.container {
-  max-width: 375px;
-
-  padding: 0 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
-}
-
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-/* ------------Visually-hidden----------- */
 
 .visually-hidden {
   position: absolute;
@@ -78,11 +41,77 @@
   overflow: hidden;
 }
 
-/* ------------BASE STYLES------------ */
-
-body {
-  font-family: 'Montserrat', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
-.section {
+body {
+  font-family: var(--font-family-base);
+  font-style: normal;
+  letter-spacing: -0.02em;
+  background-color: var(--color-background);
+  color: var(--color-black);
+}
+
+.container {
+  max-width: 375px;
+
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-inline: 32px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 1200px;
+  }
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  height: 41px;
+  padding-inline: 28px;
+  border-radius: 100px;
+  background-color: var(--color-orange);
+
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-white);
+
+  @media (min-width: 768px) {
+    height: 45px;
+    padding-inline: 40px;
+  }
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--color-button-hover);
+  color: var(--color-orange);
+}
+
+.button-transparent {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.button-transparent:is(:hover, :focus) {
+  background-color: transparent;
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
 }

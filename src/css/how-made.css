@@ -11,12 +11,12 @@
   padding-bottom: 72px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199.9px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1199.9px) {
   .how-made-container.container {
     padding-left: 77px;
     padding-right: 77px;
   }
-}
+} */
 
 .how-made-title {
   font-weight: 600;
