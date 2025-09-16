@@ -1,11 +1,17 @@
 .advantages-section {
-  background-color: var(--color-dark);
+  margin-bottom: 72px;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: var(--color-dark);
 
   @media (min-width: 768px) {
+    margin-bottom: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 128px;
   }
 }
 

@@ -7,7 +7,7 @@
 @import url(./advantages.css);
 @import url(./unique-components.css);
 @import url(./how-made.css);
-/* @import url(./products.css); */
+@import url(./our-products.css);
 /* @import url(./sellers.css); */
 /* @import url(./reviews.css); */
 /* @import url(./subscribe.css); */
@@ -97,21 +97,43 @@ svg * {
     height: 45px;
     padding-inline: 40px;
   }
-}
 
-.button:is(:hover, :focus) {
-  background-color: var(--color-button-hover);
-  color: var(--color-orange);
+  &:hover,
+  &:focus {
+    background-color: var(--color-button-hover);
+    color: var(--color-orange);
+  }
 }
 
 .button-transparent {
   background-color: transparent;
   border: 1px solid var(--color-white);
   color: var(--color-white);
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 1px solid var(--color-orange);
+    color: var(--color-orange);
+  }
 }
 
-.button-transparent:is(:hover, :focus) {
-  background-color: transparent;
-  border: 1px solid var(--color-orange);
-  color: var(--color-orange);
+.button-grey {
+  display: inline-flex;
+  align-items: center;
+  height: 33px;
+  padding-inline: 20px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  background-color: var(--color-background);
+  cursor: auto;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  /* &:hover,
+  &:focus {
+    border: 1px solid var(--color-orange);
+    color: var(--color-orange);
+  } */
 }

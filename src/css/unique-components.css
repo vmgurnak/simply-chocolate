@@ -1,12 +1,12 @@
 .section-components {
-  padding: 72px 0;
+  margin-bottom: 72px;
 
   @media (min-width: 768px) {
-    padding: 100px 0;
+    margin-bottom: 100px;
   }
 
   @media (min-width: 1200px) {
-    padding: 128px 0;
+    margin-bottom: 128px;
   }
 }
 

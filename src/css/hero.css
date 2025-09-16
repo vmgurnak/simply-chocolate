@@ -1,12 +1,12 @@
 .hero-section {
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 
   @media (min-width: 768px) {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: 1200px) {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
   }
 }
 
