@@ -1,0 +1,110 @@
+/* Section subscribe */
+
+.section-subscribe {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/img/subscribe/subcribe-mob.webp);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0) 0%,
+        rgba(17, 17, 17, 0.4) 100%
+      ),
+      url(/img/subscribe/subcribe-mob@2x.webp);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0) 0%,
+        rgba(17, 17, 17, 0.4) 100%
+      ),
+      url(/img/subscribe/subcribe-tab.webp);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(17, 17, 17, 0) 0%,
+          rgba(17, 17, 17, 0.4) 100%
+        ),
+        url(/img/subscribe/subcribe-tab@2x.webp);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0) 0%,
+        rgba(17, 17, 17, 0.4) 100%
+      ),
+      url(/img/subscribe/subcribe-desc.webp);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(17, 17, 17, 0) 0%,
+          rgba(17, 17, 17, 0.4) 100%
+        ),
+        url(/img/subscribe/subcribe-desc@2x.webp);
+    }
+  }
+}
+
+.subscribe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 24px;
+
+  padding-block: 62px;
+
+  @media (min-width: 768px) {
+    padding-block: 72px;
+  }
+}
+
+.subscribe-title {
+  width: 291px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+
+  @media (min-width: 768px) {
+    width: 378px;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+  }
+}
+
+.subscribe-text {
+  max-width: 326px;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  color: var(--color-white);
+
+  @media (min-width: 768px) {
+    width: 467px;
+  }
+}
+
+.button.subscribe-button {
+  @media (min-width: 768px) {
+    width: 172px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
