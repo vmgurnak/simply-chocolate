@@ -11,7 +11,7 @@
 @import url(./top-sellers.css);
 @import url(./reviews.css);
 @import url(./subscribe.css);
-/* @import url(./footer.css); */
+@import url(./footer.css);
 
 :root {
   --color-black: #111111;

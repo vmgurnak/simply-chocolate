@@ -1,0 +1,147 @@
+.footer {
+  background: var(--color-dark);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.footer-info-wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    margin-bottom: 24px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 58px;
+  }
+}
+
+.footer-title {
+  width: 300px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #fd9222;
+  margin-bottom: 32px;
+
+  @media (min-width: 768px) {
+    margin-right: auto;
+    margin-bottom: 0;
+
+    font-size: 28px;
+    line-height: 1.21;
+  }
+}
+
+.footer-title-accent {
+  color: var(--color-white);
+}
+
+.footer-contacts {
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    margin-right: 50px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: 63px;
+  }
+}
+
+.footer-contacts-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.footer-contacts-list {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+}
+
+.footer-contacts-item:nth-child(1) {
+  margin-bottom: 4px;
+}
+
+.footer-contacts-link {
+  &:hover,
+  &:focus {
+    color: var(--color-orange);
+  }
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 14px;
+  align-self: flex-start;
+
+  @media (min-width: 768px) {
+    gap: 18px;
+  }
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* width: 22px;
+  height: 22px; */
+
+  @media (min-width: 768px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover .footer-social-icon,
+  &:focus .footer-social-icon {
+    stroke: var(--color-orange);
+  }
+}
+
+.footer-social-icon {
+  stroke: var(--color-white);
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+  color: var(--color-white);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 24px;
+    line-height: 1.43;
+  }
+}
+
+.footer-menu-link {
+  &:hover,
+  &:focus {
+    color: var(--color-orange);
+  }
+}
