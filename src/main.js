@@ -1,5 +1,5 @@
 import 'modern-normalize';
 
-// import './js/mobile-menu';
-// import './js/modal';
 import './js/swipper';
+import './js/mobile-menu';
+// import './js/modal';
