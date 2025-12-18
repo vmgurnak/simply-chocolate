@@ -1,5 +1,6 @@
 import 'modern-normalize';
 
 import './js/swipper';
-import './js/mobile-menu';
-// import './js/modal';
+import './js/modal';
+import './js/input-mask';
+// import './js/modal-1';
