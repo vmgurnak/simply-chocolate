@@ -4,12 +4,10 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
   // Находим все кнопки, которые открывают модальные окна
   const openBtns = document.querySelectorAll('[data-modal-open]');
 
-  console.log(openBtns);
-
   // Находим все кнопки закрытия внутри модальных окон
-  const closeBtns = document.querySelectorAll('[data-modal-close]');
+  // const closeBtns = document.querySelectorAll('[data-modal-close]');
 
-  console.log(closeBtns);
+  // console.log(closeBtns);
 
   openBtns.forEach(btn => {
     const modalId = btn.dataset.modalOpen; // id модального окна, например: "menu1"
