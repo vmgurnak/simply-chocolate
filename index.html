@@ -7,11 +7,9 @@
   <title>Simple Chocolate</title>
   <link rel="icon" type="image/svg+xml" href="/simply-chocolate/favicon-chocolate.svg" />
 
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
-
   
-  <script type="module" crossorigin src="/simply-chocolate/assets/index-c8f9d677.js"></script>
-  <link rel="stylesheet" href="/simply-chocolate/assets/index-de33a0b8.css">
+  <script type="module" crossorigin src="/simply-chocolate/assets/index-22698d5f.js"></script>
+  <link rel="stylesheet" href="/simply-chocolate/assets/index-7d6d039e.css">
 </head>
 
 <body>
@@ -551,7 +549,7 @@
       finest ingredients and handcrafted with the utmost care, each piece is a
       work of art that is sure to please.
     </p>
-    <button type="button" class="button subscribe-button js-open-modal" data-modal="3">
+    <button class="button subscribe-button js-open-modal" data-modal-open="modal-subscribe" type="button">
       Subscribe
     </button>
   </div>
@@ -660,7 +658,7 @@
     </ul>
   </div>
 </div>
-  <div class="modal-buy-now-backdrop js-modal-backdrop" id="modal-buy-now">
+  <div class="modal-backdrop js-modal-backdrop" id="modal-buy-now">
   <div class="modal-buy-now">
     <h2 class="modal-buy-now-title"><span class="modal-buy-now-title-accent">BUY</span> NOW</h2>
     <ul class="modal-buy-now-list">
@@ -745,12 +743,12 @@
     </button>
   </div>
 </div>
-  <div class="modal-review-backdrop js-modal-backdrop" id="modal-review">
+  <div class="modal-backdrop js-modal-backdrop" id="modal-review">
   <div class="modal-review">
     <h2 class="modal-review-title">leave a review
       about <span class="modal-review-title-accent">our chocolate</span></h2>
 
-    <form class="modal-review-form" id="buyForm" name="modal-buy-now-form" autocomplete="off" novalidate>
+    <form class="modal-review-form" id="reviewForm" name="modal-buy-now-form" autocomplete="off" novalidate>
       <label class="modal-review-form-label visually-hidden" for="name">Name</label>
       <input class="modal-review-input input" id="name" type="text" name="name" placeholder="Name" autofocus required
         pattern="[A-Za-z]{3,10}" autocomplete="off">
@@ -785,9 +783,27 @@
     </button>
   </div>
 </div>
+  <div class="modal-backdrop js-modal-backdrop" id="modal-subscribe">
+  <div class="modal-subscribe">
+    <h2 class="modal-subscribe-title">Explore our<br><span class="modal-review-title-accent">new chocolate</span> first!
+    </h2>
+
+    <form class="modal-subscribe-form" id="subscribeForm" name="modal-subscribe-form" autocomplete="off" novalidate>
+      <label class="modal-subscribe-form-label visually-hidden" for="email">Email</label>
+      <input class="modal-subscribe-input input" id="email" type="email" name="email" placeholder="Enter your email"
+        required>
+      <button class="modal-subscribe-form-btn button" type="submit">Submit</button>
+    </form>
+
+    <button type="button" class="button-modal-close button-modal-subscribe-close js-modal-close" data-modal-close>
+      <svg class="modal-close-icon">
+        <use href="/simply-chocolate/assets/icons-6dba169a.svg#btn-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
 
   
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 </body>
 
 </html>
