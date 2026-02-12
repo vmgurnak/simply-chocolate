@@ -11,10 +11,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
   openBtns.forEach(btn => {
     const modalId = btn.dataset.modalOpen; // id модального окна, например: "menu1"
-    console.log('modalId =', modalId);
     const modal = document.querySelector(`#${modalId}`); // модальное окно с id="menu1"
-
-    console.log('modal =', modal);
 
     if (!modal) return;
 
@@ -55,9 +52,11 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
       if (event.key === 'Escape') closeModal();
     });
 
-    // Закрытие при переходе на десктоп
-    // window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
-    //   if (e.matches) closeModal();
-    // });
+    // Закрытие мобильного меню при переходе на десктоп
+    if (modalId === 'mobile-menu') {
+      window.matchMedia('(min-width: 1200px)').addEventListener('change', e => {
+        if (e.matches) closeModal();
+      });
+    }
   });
 })();

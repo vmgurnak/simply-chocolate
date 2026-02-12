@@ -1,0 +1,32 @@
+/* Swiper */
+
+.swiper {
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 20px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.swiper-pagination.swiper-pagination-bullets {
+  position: static;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--color-orange);
+  width: 28px;
+  height: 13px;
+  border-radius: 50px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-pagination-bullet-width: 13px;
+  --swiper-pagination-bullet-height: 13px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}

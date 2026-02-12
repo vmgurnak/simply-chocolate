@@ -1,31 +1,3 @@
-.modal-buy-now-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 47, 66, 0.4);
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(1.5);
-  pointer-events: none;
-  transition-duration: var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-
-.modal-buy-now-backdrop.is-open {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  pointer-events: auto;
-}
-
 .modal-buy-now {
   position: relative;
   padding: 32px 24px;
@@ -234,41 +206,5 @@
 
   @media (min-width: 768px) {
     width: 133px;
-  }
-}
-
-.button-modal-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  stroke: var(--color-black);
-  border-radius: 50%;
-
-  overflow: hidden;
-
-  &:hover,
-  &:focus {
-    stroke: var(--color-orange);
-    background-color: var(--color-button-hover);
-  }
-
-  @media (min-width: 768px) {
-    top: 24px;
-    right: 24px;
-  }
-}
-
-.modal-close-icon {
-  width: 24px;
-  height: 24px;
-
-  @media (min-width: 768px) {
-    width: 28px;
-    height: 28px;
   }
 }

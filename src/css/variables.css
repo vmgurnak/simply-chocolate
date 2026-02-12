@@ -1,0 +1,13 @@
+:root {
+  --color-black: #111111;
+  --color-dark: #1e1823;
+  --color-orange: #fd9222;
+  --color-button-hover: #fcf1e0;
+  --color-white: #ffffff;
+  --color-background: #fafafa;
+
+  --font-family-base: 'Montserrat', sans-serif;
+
+  --transition-duration: 0.4s;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

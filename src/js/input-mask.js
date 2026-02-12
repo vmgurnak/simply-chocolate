@@ -1,18 +1,26 @@
-document
-  .querySelector('input[name="phone_number"]')
-  .addEventListener('input', e => {
-    let v = e.target.value.replace(/\D/g, '').slice(0, 9);
-    if (v.length > 2) v = v.slice(0, 2) + ' ' + v.slice(2);
-    e.target.value = v;
-  });
+const buyForm = document.getElementById('buyForm');
+const reviewForm = document.getElementById('reviewForm');
+const subscribeForm = document.getElementById('subscribeForm');
 
-document
-  .querySelector('input[name="card_number"]')
-  .addEventListener('input', e => {
-    let v = e.target.value.replace(/\D/g, '').slice(0, 16);
-    v = v.replace(/(.{4})/g, '$1 ').trim();
-    e.target.value = v;
+function phoneNumberMask(input) {
+  input.addEventListener('input', () => {
+    let v = input.value.replace(/\D/g, '').slice(0, 9);
+    if (v.length > 2) v = v.slice(0, 2) + ' ' + v.slice(2);
+    input.value = v;
   });
+}
+
+function cardNumberMask(input) {
+  input.addEventListener('input', () => {
+    let v = input.value.replace(/\D/g, '').slice(0, 16);
+    v = v.replace(/(.{4})/g, '$1 ').trim();
+    input.value = v;
+  });
+}
+
+phoneNumberMask(buyForm.phone_number);
+phoneNumberMask(reviewForm.phone_number);
+cardNumberMask(buyForm.card_number);
 
 function capitalizeFirst(input) {
   input.addEventListener('input', () => {
@@ -21,36 +29,55 @@ function capitalizeFirst(input) {
   });
 }
 
-capitalizeFirst(document.querySelector('input[name="name"]'));
-capitalizeFirst(document.querySelector('input[name="surname"]'));
-
-const form = document.getElementById('buyForm');
+capitalizeFirst(buyForm.name);
+capitalizeFirst(buyForm.surname);
+capitalizeFirst(reviewForm.name);
 
 const fields = [
   {
-    el: document.querySelector('input[name="name"]'),
+    el: buyForm.name,
     empty: 'Enter your name.',
     invalid: 'Use 3–10 letters, first letter uppercase.',
   },
   {
-    el: document.querySelector('input[name="surname"]'),
+    el: buyForm.surname,
     empty: 'Enter your surname.',
     invalid: 'Use 3–10 letters, first letter uppercase.',
   },
   {
-    el: document.querySelector('input[name="email"]'),
+    el: buyForm.email,
     empty: 'Email is required.',
     invalid: 'Enter a valid email (example@mail.com).',
   },
   {
-    el: document.querySelector('input[name="phone_number"]'),
+    el: buyForm.phone_number,
     empty: 'Phone number is required.',
     invalid: 'Format: 67 1234567',
   },
   {
-    el: document.querySelector('input[name="card_number"]'),
+    el: buyForm.card_number,
     empty: 'Card number is required.',
     invalid: 'Format: 1111 1111 1111 1111',
+  },
+  {
+    el: reviewForm.name,
+    empty: 'Enter your name.',
+    invalid: 'Use 3–10 letters, first letter uppercase.',
+  },
+  {
+    el: reviewForm.email,
+    empty: 'Email is required.',
+    invalid: 'Enter a valid email (example@mail.com).',
+  },
+  {
+    el: reviewForm.phone_number,
+    empty: 'Phone number is required.',
+    invalid: 'Format: 67 1234567',
+  },
+  {
+    el: subscribeForm.email,
+    empty: 'Email is required.',
+    invalid: 'Enter a valid email (example@mail.com).',
   },
 ];
 
@@ -74,64 +101,41 @@ fields.forEach(({ el }) => {
   });
 });
 
-form.addEventListener('submit', e => {
+buyForm.addEventListener('submit', e => {
   e.preventDefault();
 
   prepareValidation();
 
-  if (form.checkValidity()) {
+  if (buyForm.checkValidity()) {
     console.log('FORM OK');
-    form.reset(); // ✔ очищается
+    buyForm.reset(); // ✔ очищается
   } else {
-    form.reportValidity(); // ❗ ТОЛЬКО кастомные сообщения
+    buyForm.reportValidity(); // ❗ ТОЛЬКО кастомные сообщения
   }
 });
 
-function setValidationMessages(input, emptyMessage, invalidMessage) {
-  input.addEventListener('invalid', function () {
-    if (this.validity.valueMissing) {
-      this.setCustomValidity(emptyMessage);
-    } else {
-      this.setCustomValidity(invalidMessage);
-    }
-  });
+reviewForm.addEventListener('submit', e => {
+  e.preventDefault();
 
-  input.addEventListener('input', function () {
-    this.setCustomValidity('');
-  });
-}
+  prepareValidation();
 
-// Name
-setValidationMessages(
-  document.querySelector('input[name="name"]'),
-  'Enter your name.',
-  'Use 3–10 letters A–Z.'
-);
+  if (reviewForm.checkValidity()) {
+    console.log('FORM OK');
+    reviewForm.reset(); // ✔ очищается
+  } else {
+    reviewForm.reportValidity(); // ❗ ТОЛЬКО кастомные сообщения
+  }
+});
 
-// Surname
-setValidationMessages(
-  document.querySelector('input[name="surname"]'),
-  'Enter your surname.',
-  'Use 3–10 letters A–Z.'
-);
+subscribeForm.addEventListener('submit', e => {
+  e.preventDefault();
 
-// Email
-setValidationMessages(
-  document.querySelector('input[name="email"]'),
-  'Email is required.',
-  'Enter a valid email (example@mail.com).'
-);
+  prepareValidation();
 
-// Phone
-setValidationMessages(
-  document.querySelector('input[name="phone_number"]'),
-  'Phone number is required.',
-  'Format: 67 1234567'
-);
-
-// Card
-setValidationMessages(
-  document.querySelector('input[name="card_number"]'),
-  'Card number is required.',
-  'Format: 1111 1111 1111 1111'
-);
+  if (subscribeForm.checkValidity()) {
+    console.log('FORM OK');
+    subscribeForm.reset(); // ✔ очищается
+  } else {
+    subscribeForm.reportValidity(); // ❗ ТОЛЬКО кастомные сообщения
+  }
+});
