@@ -4,25 +4,32 @@
       about <span class="modal-review-title-accent">our chocolate</span></h2>
 
     <form class="modal-review-form" id="reviewForm" name="modal-buy-now-form" autocomplete="off" novalidate>
-      <label class="modal-review-form-label visually-hidden" for="name">Name</label>
-      <input class="modal-review-input input" id="name" type="text" name="name" placeholder="Name" autofocus required
-        pattern="[A-Za-z]{3,10}" autocomplete="off">
+      <label class="modal-review-form-label" for="name">
+        <!-- Name -->
+        <input class="modal-review-input input" id="name" type="text" name="name" placeholder="Name" autofocus required
+          pattern="[A-Za-z]{3,10}" autocomplete="off">
+      </label>
+      <label class="modal-review-form-label" for="email">
+        <!-- Email -->
+        <input class="modal-review-input input" id="email" type="email" name="email" placeholder="Enter your email"
+          required>
+      </label>
 
-      <label class="modal-review-form-label visually-hidden" for="email">Email</label>
-      <input class="modal-review-input input" id="email" type="email" name="email" placeholder="Enter your email"
-        required>
 
-      <label class="modal-review-form-label visually-hidden" for="phone_number">Phone number</label>
-      <div class="modal-review-wrap-tel">
-        <input class="modal-review-input input modal-review-input-tel" id="phone_number" type="tel" name="phone_number"
-          placeholder="67 1234567" required pattern="[0-9]{2} [0-9]{7}" autocomplete="off">
-        <div class="modal-review-wrap-code">
-          <svg class="modal-review-code-icon">
-            <use href="/img/icons.svg#ua"></use>
-          </svg>
-          <span class="modal-review-code-text">+380</span>
+      <label class="modal-review-form-label" for="phone_number">
+        <!-- Phone number -->
+        <div class="modal-review-wrap-tel">
+          <input class="modal-review-input input modal-review-input-tel" id="phone_number" type="tel"
+            name="phone_number" placeholder="67 1234567" required pattern="[0-9]{2} [0-9]{7}" autocomplete="off">
+          <div class="modal-review-wrap-code">
+            <svg class="modal-review-code-icon">
+              <use href="/img/icons.svg#ua"></use>
+            </svg>
+            <span class="modal-review-code-text">+380</span>
+          </div>
         </div>
-      </div>
+      </label>
+
 
       <label class="modal-review-form-label visually-hidden" for="comment">Comment</label>
       <textarea class="modal-review-textarea textarea" id="comment" name="modal_comment"

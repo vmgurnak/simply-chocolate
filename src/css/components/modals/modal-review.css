@@ -42,6 +42,12 @@
   row-gap: 14px;
 }
 
+.modal-review-form-label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
 .modal-review-input {
   font-weight: 500;
   font-size: 12px;
@@ -122,4 +128,10 @@
   @media (min-width: 768px) {
     width: 117px;
   }
+}
+
+.modal-review-form-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  /* cursor: not-allowed; */
 }

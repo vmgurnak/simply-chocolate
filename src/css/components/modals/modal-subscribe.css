@@ -59,6 +59,12 @@
   position: relative;
 }
 
+.modal-subscribe-form-label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
 .modal-subscribe-input.input {
   padding-right: 50px;
   font-weight: 500;
@@ -78,6 +84,7 @@
 
 .modal-subscribe-form-btn.button {
   position: absolute;
+  top: 0;
   bottom: 0;
   right: 0;
 
@@ -92,4 +99,10 @@
 
 .button-modal-subscribe-close {
   stroke: var(--color-white);
+}
+
+.modal-subscribe-form-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  /* cursor: not-allowed; */
 }

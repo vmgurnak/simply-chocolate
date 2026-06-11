@@ -3,6 +3,7 @@
 @import url('./fonts.css');
 @import url('./variables.css');
 @import url('./global.css');
+@import url('./container.css');
 
 /* sections */
 @import url('./components/sections/header.css');

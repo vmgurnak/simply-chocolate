@@ -32,6 +32,28 @@
   }
 }
 
+.input.input-error {
+  border-color: var(--color-red);
+}
+
+.input.input-success {
+  border-color: var(--color-green);
+}
+
+.input.input-error:focus {
+  border-color: var(--color-red);
+}
+
+.input.input-success:focus {
+  border-color: var(--color-green);
+}
+
+.error-message {
+  font-size: 11px;
+  color: var(--color-red);
+  margin-top: 4px;
+}
+
 .textarea {
   height: 91px;
   resize: none;

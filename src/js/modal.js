@@ -7,8 +7,7 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
   // Находим все кнопки закрытия внутри модальных окон
   // const closeBtns = document.querySelectorAll('[data-modal-close]');
 
-  // console.log(closeBtns);
-
+  // Перебираем все кнопки
   openBtns.forEach(btn => {
     const modalId = btn.dataset.modalOpen; // id модального окна, например: "menu1"
     const modal = document.querySelector(`#${modalId}`); // модальное окно с id="menu1"
@@ -16,6 +15,8 @@ import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
     if (!modal) return;
 
     const toggleModal = () => {
+      modal.firstElementChild.scrollTop = 0; // возвращаем скролл в начало
+
       const isOpen = modal.classList.contains('is-open');
       modal.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', !isOpen);

@@ -1,6 +1,6 @@
 <!-- Section how-it's-made -->
 
-<section class="section-how-made">
+<!-- <section class="section-how-made">
   <div class="container how-made-container">
     <h2 class="how-made-title" id="how-made">
       hOW IT’S
@@ -32,6 +32,67 @@
             cool and harden.</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section-how-made">
+  <div class="container how-made-container">
+    <h2 class="how-made-title" id="how-made">
+      hOW IT’S
+      <span class="how-made-title-accent">made?</span>
+    </h2>
+
+    <div class="how-made-wrap">
+
+      <!-- VIDEO BLOCK -->
+      <div class="how-made-video-wrap">
+
+        <div class="how-made-video-preview" id="videoPreview">
+          <picture>
+            <!-- Desktop -->
+            <source media="(min-width: 1200px)" srcset="
+                /img/made/made-desk.webp 1x,
+                /img/made/made-desk@2x.webp 2x
+              " />
+
+            <!-- Tablet -->
+            <source media="(min-width: 768px)" srcset="
+                /img/made/made-tab.webp 1x,
+                /img/made/made-tab@2x.webp 2x
+              " />
+
+            <!-- Mobile -->
+            <img src="/img/made/made-mob.webp" srcset="/img/made/made-mob@2x.webp 2x" alt="How chocolate is made"
+              class="how-made-image" loading="lazy" />
+          </picture>
+
+          <button class="how-made-play-btn" id="playVideoBtn" aria-label="Play video">
+          </button>
+        </div>
+
+        <!-- сюда динамически вставляется iframe -->
+        <div id="playerContainer"></div>
+
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="how-made-descr-wrap">
+        <h3 class="how-made-subtitle">
+          Try our chocolates today and discover the perfect balance of flavor
+        </h3>
+
+        <ul class="how-made-list">
+          <li class="how-made-item">Heat the milk in a saucepan without bringing it to a boil. Add sugar and cocoa
+            powder.</li>
+          <li class="how-made-item">At the same time, prepare a water bath. Melt the butter on it.</li>
+          <li class="how-made-item">Mix the milk mixture and already liquid butter. Mix thoroughly so that the mass
+            becomes uniform and silky.</li>
+          <li class="how-made-item">Heat the mixture over low heat, letting it barely boil.</li>
+          <li class="how-made-item">Pour the chocolate into special containers. Allow to cool and harden.</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
