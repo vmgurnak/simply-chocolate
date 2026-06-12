@@ -3,7 +3,7 @@
   padding: 201px 32px 24px;
   width: min(90%, 311px);
   height: min(95%, 350px);
-  overflow-y: auto;
+  /* overflow-y: auto; */
 
   border-radius: 15px;
   background-color: var(--color-background);
